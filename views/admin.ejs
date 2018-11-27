@@ -1,0 +1,32 @@
+
+<% include partials/header %>
+
+  <link href="/css/signuploginuserstyle.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+  	<% include partials/topbar %>
+  	<br>
+  	<br>
+  	<br>
+    <div class = "container">
+ 	 <h1>Search For a Constituenty</h1>
+ 		<div class= "col-lg-6 well" >
+ 			<h3>For votar detail </h3>
+			<form action="admin_results" method="GET">
+			    <input type="text" placeholder="search term" name="search" class="form-control">
+			    <input type="submit" class="btn btn-default">
+			</form>
+		</div>
+		<div class= "col-lg-5 well" >
+			<h3> For result of particular constituency </h3>
+			<form action="/profilePolingAgent" method="GET">
+			    <input type="text" placeholder="search term" name="search" class="form-control">
+			    <input type="submit" class="btn btn-default">
+			</form>
+		</div>
+
+  	</div>
+
+
+  <% include partials/footer %>

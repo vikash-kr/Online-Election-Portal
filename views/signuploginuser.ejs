@@ -1,0 +1,114 @@
+<% include partials/header %>
+
+  <link href="/css/signuploginuserstyle.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse" style="padding: 3px 3px 3px 3px">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+        <img alt="E.C.I." src="http://eci.nic.in/ECI_Main1/images/Logo_ECI1.ico" height="30" width="30">
+        </a>
+          <a class="navbar-brand" href="/">HOME</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+
+          <!-- Login Form  -->
+          <form class="form-inline" action="/profileUser" method="POST">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <input class="form-control" type="text" placeholder="Username" aria-label="User Name" name="username" style="margin-top: 5% ">
+              </li>
+              <li>***</li>
+              <li>
+                <input class="form-control" type="Password" placeholder="Password" aria-label="Password" name="password" style="margin-top: 5%">
+              </li>
+              <li>
+                <a href="#" onclick="document.forms[0].submit();return false;">
+                  <span class="glyphicon glyphicon-log-in"></span> Login</a>
+              </li>
+            </ul>
+          </form>
+
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="/images/voter.jpg" class="img-thumbnail img-responsive" alt="Cinque Terre">
+        </div>
+        <div class="col-lg-6">
+          <div class="container-fluid">
+              <h3 class="text-center">Create Account</h3>
+              <div class="container-fluid">
+
+                <!-- Registration form for user -->
+                <form action="/signuploginuser" method="POST"> 
+                    <div class="form-group col-md-12">
+                      <label for="aadhar_no">Aadhar Number</label>
+                      <input type="text" class="form-control" id="aadhar_no" name="aadhar_no" placeholder="Aadhar Number">
+                    </div>
+            
+                  <div class="form-group col-md-12">
+                      <label for="fullname">Full Name</label>
+                      <input type="text" class="form-control" id="fullname" name="fullname" placeholder="John Doe">
+                  </div>
+
+                  <div class="form-group col-md-12">
+                      <label for="f_h_name">Father/husband Name</label>
+                      <input type="text" class="form-control" id="f_h_name" name="f_h_name" placeholder="Father/husband Name">
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="gender">Gender</label>
+                        <input type="text" class="form-control" id="gender" name="gender" placeholder="M or F">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="dob">DoB</label>
+                        <input type="text" class="form-control" id="dob" name="dob" placeholder="DD/MM/YYYY">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                      <div class="form-group col-md-4">
+                        <label for="City">City</label>
+                        <input type="text" class="form-control" id="City" name="city" placeholder="City">
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="State">State</label>
+                        <input type="state" class="form-control" id="State" name="state" placeholder="State">
+                      </div>
+                      <div class="form-group col-md-4">
+                          <label for="country">Country</label>
+                          <input type="Country" class="form-control" id="country" name="country" placeholder="Country">
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-12">
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                    </div>
+
+                  <div class="form-group col-md-12">
+                      <label for="ct">Constiturnty</label>
+                      <input type="text" class="form-control" id="ct" name="ct" placeholder="ct">
+                  </div>
+
+                  <div class="col-md-12">
+                      <button type="submit" class="btn btn-primary">Register</button>
+                  </div> 
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <% include partials/footer %>
